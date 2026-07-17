@@ -2,7 +2,7 @@ import { Router } from "express";
 import * as uploadController from "@/controllers/upload.controller.js";
 import uploadMiddleware from "@/middleware/upload.middleware.js";
 
-const router = Router();
+const router: Router = Router();
 
 router.get("/", uploadController.index);
 

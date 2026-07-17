@@ -1,3 +1,4 @@
+import type { RequestHandler } from "express";
 import multer from "multer";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
@@ -17,6 +18,6 @@ const upload = multer({
   },
 });
 
-const uploadMiddleware = upload.array("images", 10);
+const uploadMiddleware: RequestHandler = upload.array("images", 10);
 
 export default uploadMiddleware;

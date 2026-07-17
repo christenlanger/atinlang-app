@@ -5,7 +5,7 @@ import type { MessageState } from "../types";
 type Props = {
   id: number;
   message: string;
-  isError?: boolean;
+  isError?: boolean | undefined;
   timeoutMs?: number;
   onExpire?: (id: number) => void;
 };

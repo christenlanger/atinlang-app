@@ -1,4 +1,4 @@
-import type { UploadResult } from "@/context/upload/types";
+import type { UploadResult } from "@atinlang/shared";
 
 export function uploadStatusMessage(res?: UploadResult): { message: string; isError: boolean } {
   if (!res) {

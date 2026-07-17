@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import { NotificationProvider } from "./context/notifications";
 import { UploadProvider } from "./context/upload";
 
-import fetchBatch from "./loaders/fetchBatch.ts";
+import fetchBatch from "./loaders/fetchBatch";
 import { Error404Page, Layout, HomePage, Results } from "./pages";
 
 const router = createBrowserRouter([

@@ -27,12 +27,11 @@ nano ./apps/api/.env
 pnpm install
 
 # Run required prisma commands for database
-pnpm run prisma:migrate
-pnpm run prisma:generate
+pnpm prisma:prepare
 
 # Open a terminal for each app (frontend and backend)
-pnpm run dev:api
-pnpm run dev:web
+pnpm dev:api
+pnpm dev:web
 ```
 
 Deployment will depend on your service provider. It is important to run the prisma commands to initialize your database.

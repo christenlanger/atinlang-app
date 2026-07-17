@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import type { UploadResult } from "./types";
+import type { UploadResult } from "@atinlang/shared";
 
 export type UploadContextValue = {
   result: UploadResult | null;
