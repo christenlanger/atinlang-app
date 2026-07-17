@@ -2,7 +2,7 @@
 
 This is a personal project for uploading and hosting media.
 
-It is built using React and Node.js and utilizes CloudFlare R2 for storage. At the moment I used SQLite for database storage as the project is still in its earliest stages.
+It is built using React and Node.js and utilizes CloudFlare R2 for storage. Database has been switched from SQLite to PostgreSQL.
 
 ## To-do list
 

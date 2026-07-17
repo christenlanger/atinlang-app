@@ -28,6 +28,5 @@ console.log("exists:", fs.existsSync(dbPath));
 
 // Listen
 app.listen(PORT, () => {
-  console.log(`Database available on ${env.DATABASE_URL}`);
   console.log(`Listening on port ${PORT}`);
 });
