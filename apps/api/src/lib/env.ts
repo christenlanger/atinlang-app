@@ -11,6 +11,7 @@ const envSchema = z.object({
   CLOUDFLARE_BUCKET: z.string().min(1),
   CLOUDFLARE_DOMAIN: z.url(),
   DATABASE_URL: z.string(),
+  PG_CA_CERT: z.string().optional(),
 });
 
 export const env = envSchema.parse(process.env);
