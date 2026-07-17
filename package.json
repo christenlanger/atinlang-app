@@ -1,0 +1,20 @@
+{
+  "name": "atinlang-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api dev",
+    "build:web": "pnpm --filter web build",
+    "build:api": "pnpm --filter api build",
+    "lint": "pnpm -r lint",
+    "build": "pnpm -r build",
+    "prisma:migrate": "pnpm --filter api exec prisma migrate dev",
+    "prisma:generate": "pnpm --filter api exec prisma generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0"
+}

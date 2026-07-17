@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: system-ui, "Segoe UI", Roboto, sans-serif;
+
+  --animate-fade-in: fade-in 200ms ease-in-out forwards;
+  --animate-fade-out: fade-out 200ms ease-in-out forwards;
+  --animate-toast-top: toast-top 300ms ease-in-out forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes toast-top {
+    from {
+      margin-block-start: -30%;
+    }
+    to {
+      margin-block-start: 0;
+    }
+  }
+}
+
+.notif-state-enter {
+  @apply mbs-[-30%] animate-toast-top;
+}
+
+.notif-state-exit {
+  @apply animate-fade-out;
+}

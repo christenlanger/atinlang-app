@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Batch {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  images    Image[]
+}
+
+model Image {
+  id        Int    @id @default(autoincrement())
+  objectKey String @unique
+  width     Int
+  height    Int
+  sizeBytes Int
+  mimeType  String
+
+  batchId String
+  batch   Batch  @relation(fields: [batchId], references: [id])
+
+  createdAt DateTime @default(now())
+}
